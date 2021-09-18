@@ -23,10 +23,12 @@
 		<!-- #3 todoアプリ -->
 		<ul>
 			<!-- データを表示 -->
-			<li>{{ todos[0] }}</li>
+			<!-- <li>{{ todos[0] }}</li>
 			<li>{{ todos[1] }}</li>
-			<li>{{ todos[2] }}</li>
+			<li>{{ todos[2] }}</li> -->
 
+			<!-- ループ -->
+			<li v-for="todo in todos">{{ todo }}</li>
 		</ul>
 	</div>
 	<!-- /#2 -->
