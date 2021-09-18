@@ -7,6 +7,11 @@
 	var vm = new Vue({
 		el: '#app',
 		data: {
+			todos: [
+				'task 1',
+				'task 2',
+				'task 3'
+			]
 			// nameは#2で完了
 			// name: 'taguchi'
 		}

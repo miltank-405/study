@@ -15,9 +15,19 @@
 		<!-- UIの反映は{{}}で表現 -->
 		<!-- <p>Hello {{ name }}!</p> -->
 		<!-- nameの値を大文字に反映 -->
-		<p>Hello {{ name.toUpperCase() }}!</p>
+		<!-- #2終了 -->
+		<!-- <p>Hello {{ name.toUpperCase() }}!</p> -->
 		<!-- UIからデータへの反映 -->
-		<p><input type="text" v-model="name"></p>
+		<!-- <p><input type="text" v-model="name"></p> -->
+
+		<!-- #3 todoアプリ -->
+		<ul>
+			<!-- データを表示 -->
+			<li>{{ todos[0] }}</li>
+			<li>{{ todos[1] }}</li>
+			<li>{{ todos[2] }}</li>
+
+		</ul>
 	</div>
 	<!-- /#2 -->
 
