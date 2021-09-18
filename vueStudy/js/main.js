@@ -3,7 +3,7 @@
 
 	// ========== #2 ==========
 	// データを更新するとUIが更新される(その逆も然り)
-	// two way data binding (to UI)
+	// two way data binding (to UI) -- 双方向データバインディング
 	var vm = new Vue({
 		el: '#app',
 		data: {
