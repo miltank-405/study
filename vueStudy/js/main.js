@@ -7,7 +7,8 @@
 	var vm = new Vue({
 		el: '#app',
 		data: {
-			name: 'taguchi'
+			// nameは#2で完了
+			// name: 'taguchi'
 		}
 	});
 	// ========== /#2 ==========
