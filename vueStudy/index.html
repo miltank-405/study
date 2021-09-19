@@ -11,7 +11,7 @@
 <body>
 	
 	<!-- #2 -->
-	<div id="app">
+	<div class="container" id="app">
 		<!-- UIの反映は{{}}で表現 -->
 		<!-- <p>Hello {{ name }}!</p> -->
 		<!-- nameの値を大文字に反映 -->
@@ -21,6 +21,7 @@
 		<!-- <p><input type="text" v-model="name"></p> -->
 
 		<!-- #3 todoアプリ -->
+		<h1>My Todo</h1>
 		<ul>
 			<!-- データを表示 -->
 			<!-- <li>{{ todos[0] }}</li>
@@ -30,6 +31,11 @@
 			<!-- ループ -->
 			<li v-for="todo in todos">{{ todo }}</li>
 		</ul>
+		<!-- 入力フォーム -->
+		<form>
+			<input type="text">
+			<input type="submit" value="add">
+		</form>
 	</div>
 	<!-- /#2 -->
 
