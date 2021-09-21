@@ -30,6 +30,10 @@
 				this.todos.push(this.newItem);
 				// 値が残るのが気持ち悪いから毎度空にする
 				this.newItem = '';
+			},
+			deleteItem: function(index) {
+				if (confirm('are you sure?'))
+					this.todos.splice(index, 1);
 			}
 		}
 	});
