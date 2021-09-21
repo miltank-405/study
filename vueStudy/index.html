@@ -30,7 +30,7 @@
 
 			<!-- ループ -->
 			<li v-for="(todo, index) in todos">
-				{{ todo }}
+				{{ todo.title }}
 				<!-- 削除用 -->
 				<!-- 何番目のアイテムの削除か分からないから、liタグのindex追加すると0から始まる順番が入る -->
 				<span @click="deleteItem(index)" class="command">[×]</span>

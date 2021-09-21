@@ -8,18 +8,28 @@
 		el: '#app',
 		data: {
 			newItem: '',
-			todos: [
-				'task 1',
-				'task 2',
-				'task 3'
-			]
+			todos: [{
+				// 完了しているかも確認したい
+				// isDoneキーで完了しているか確認
+				title: 'task 1',
+				isDone: false
+			},{
+				title: 'task 2',
+				isDone: false
+			},{
+				title: 'task 3',
+				isDone: true
+			}]
 			// nameは#2で完了
 			// name: 'taguchi'
 		},
 		methods: {
 			// addItemについては下記の処理だよ
 			addItem: function() {
-
+				var item = {
+					title: this.newItem,
+					isDone: false
+				};
 			// addItem: function(e) {
 				// e.preventDefault();  htmlで@submit.preventと同じ意味
 
@@ -27,7 +37,7 @@
 				// this.todos.pushの後にthis.newItemとすると
 				// newItemに追加された内容がtodosの末尾に追加されて
 				// 結果として<li>要素に反映されるはず
-				this.todos.push(this.newItem);
+				this.todos.push(item);
 				// 値が残るのが気持ち悪いから毎度空にする
 				this.newItem = '';
 			},
