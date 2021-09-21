@@ -30,7 +30,14 @@
 
 			<!-- ループ -->
 			<li v-for="(todo, index) in todos">
-				{{ todo.title }}
+				<!-- todoの状態が分かるようにチェックボックス追加 -->
+				<!-- v-modelでisDoneがtrueの時にチェックしてくれる -->
+				<input type="checkbox" v-model="todo.isDone">
+				<!-- データに応じてクラスを付け替える v-bind:class -->
+				<!-- todoのisDoneがtrueの場合はdoneというクラスを付与 -->
+				<!-- <span v-bind:class="{done: todo.isDone}">{{ todo.title }}</span>   ▼と同じ意味 -->
+				<span :class="{done: todo.isDone}">{{ todo.title }}</span>
+
 				<!-- 削除用 -->
 				<!-- 何番目のアイテムの削除か分からないから、liタグのindex追加すると0から始まる順番が入る -->
 				<span @click="deleteItem(index)" class="command">[×]</span>

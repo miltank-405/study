@@ -14,8 +14,18 @@ body {
 	padding: 16px 0;
 }
 
+.container ul {
+	padding: 0;
+	list-style: none;
+}
+
 .container li {
 	line-height: 1.5;
+}
+
+.container li >span.done {
+	text-decoration: line-through;
+	color: #bbb;
 }
 
 .command {
