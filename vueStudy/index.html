@@ -33,6 +33,7 @@
 		</ul>
 		<!-- 入力フォーム -->
 		<!-- <form v-on:submit="addItem"> -->
+		<!-- ▼.preventをつけないと普通のフォーム送信と同じ状態になる -->
 		<form @submit.prevent="addItem">
 			<input type="text" v-model="newItem">
 			<input type="submit" value="add">
