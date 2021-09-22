@@ -18,16 +18,28 @@
 			deleteItem: function(index) {
 				if (confirm('are you sure?'))
 					this.todos.splice(index, 1);
+			},
+			purge: function() {
+				if (!confirm('delete finished?')){
+					return;
+				}
+				// this.todos = this.todos.filter(function(todo){
+				// 	return !todo.isDone;
+				// });
+				this.todos = this.remaining;
 			}
 		},
 		// todoの残数を表示していく
 		// computedはデータから動的にプロパティを計算してくれる算出プロパティ
 		computed: {
 			remaining: function() {
-				let items = this.todos.filter(function(todo){
+				// let items = this.todos.filter(function(todo){
+				// 	return !todo.isDone;
+				// });
+				// return items.length;
+				return this.todos.filter(function(todo) {
 					return !todo.isDone;
 				});
-				return items.length;
 			}
 		}
 	});
