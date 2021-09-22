@@ -8,18 +8,19 @@
 		el: '#app',
 		data: {
 			newItem: '',
-			todos: [{
-				// 完了しているかも確認したい
-				// isDoneキーで完了しているか確認
-				title: 'task 1',
-				isDone: false
-			},{
-				title: 'task 2',
-				isDone: false
-			},{
-				title: 'task 3',
-				isDone: true
-			}]
+			todos: []
+			// todos: [{
+			// 	// 完了しているかも確認したい
+			// 	// isDoneキーで完了しているか確認
+			// 	title: 'task 1',
+			// 	isDone: false
+			// },{
+			// 	title: 'task 2',
+			// 	isDone: false
+			// },{
+			// 	title: 'task 3',
+			// 	isDone: true
+			// }]
 			// nameは#2で完了
 			// name: 'taguchi'
 		},
