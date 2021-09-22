@@ -9,57 +9,23 @@
 	<title>My Vue App</title>
 </head>
 <body>
-	
-	<!-- #2 -->
 	<div class="container" id="app">
-		<!-- UIの反映は{{}}で表現 -->
-		<!-- <p>Hello {{ name }}!</p> -->
-		<!-- nameの値を大文字に反映 -->
-		<!-- #2終了 -->
-		<!-- <p>Hello {{ name.toUpperCase() }}!</p> -->
-		<!-- UIからデータへの反映 -->
-		<!-- <p><input type="text" v-model="name"></p> -->
-
-		<!-- #3 todoアプリ -->
 		<h1>My Todo</h1>
 		<ul v-if="todos.length">
-			<!-- データを表示 -->
-			<!-- <li>{{ todos[0] }}</li>
-			<li>{{ todos[1] }}</li>
-			<li>{{ todos[2] }}</li> -->
-
-			<!-- ループ -->
-			<!-- todosがtrueのときは▼の処理 -->
 			<li v-for="(todo, index) in todos">
-				<!-- todoの状態が分かるようにチェックボックス追加 -->
-				<!-- v-modelでisDoneがtrueの時にチェックしてくれる -->
 				<input type="checkbox" v-model="todo.isDone">
-				<!-- データに応じてクラスを付け替える v-bind:class -->
-				<!-- todoのisDoneがtrueの場合はdoneというクラスを付与 -->
-				<!-- <span v-bind:class="{done: todo.isDone}">{{ todo.title }}</span>   ▼と同じ意味 -->
 				<span :class="{done: todo.isDone}">{{ todo.title }}</span>
-
-				<!-- 削除用 -->
-				<!-- 何番目のアイテムの削除か分からないから、liタグのindex追加すると0から始まる順番が入る -->
 				<span @click="deleteItem(index)" class="command">[×]</span>
 			</li>
-			<!-- todoがなかった場合に何らかのメッセージを表示するUIを作る -->
-			<!-- todo.lengthがfalseのとき(todosが空配列のとき)にメッセージを表示 -->
-			<!-- <li v-else="!todos.length">Nothing to do,yay!</li> -->
 		</ul>
 		<ul v-else="!todos.length">
 			<li>Nothing to do,yay!</li>
 		</ul>
-		<!-- 入力フォーム -->
-		<!-- <form v-on:submit="addItem"> -->
-		<!-- ▼.preventをつけないと普通のフォーム送信と同じ状態になる -->
 		<form @submit.prevent="addItem">
 			<input type="text" v-model="newItem">
 			<input type="submit" value="add">
 		</form>
 	</div>
-	<!-- /#2〜#4終了 -->
-
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 	<script src="js/main.js"></script>
 </body>
