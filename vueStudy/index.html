@@ -22,13 +22,14 @@
 
 		<!-- #3 todoアプリ -->
 		<h1>My Todo</h1>
-		<ul>
+		<ul v-if="todos.length">
 			<!-- データを表示 -->
 			<!-- <li>{{ todos[0] }}</li>
 			<li>{{ todos[1] }}</li>
 			<li>{{ todos[2] }}</li> -->
 
 			<!-- ループ -->
+			<!-- todosがtrueのときは▼の処理 -->
 			<li v-for="(todo, index) in todos">
 				<!-- todoの状態が分かるようにチェックボックス追加 -->
 				<!-- v-modelでisDoneがtrueの時にチェックしてくれる -->
@@ -44,7 +45,10 @@
 			</li>
 			<!-- todoがなかった場合に何らかのメッセージを表示するUIを作る -->
 			<!-- todo.lengthがfalseのとき(todosが空配列のとき)にメッセージを表示 -->
-			<li v-show="!todos.length">Nothing to do,yay!</li>
+			<!-- <li v-else="!todos.length">Nothing to do,yay!</li> -->
+		</ul>
+		<ul v-else="!todos.length">
+			<li>Nothing to do,yay!</li>
 		</ul>
 		<!-- 入力フォーム -->
 		<!-- <form v-on:submit="addItem"> -->
