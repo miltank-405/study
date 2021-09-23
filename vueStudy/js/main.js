@@ -6,6 +6,17 @@
 			newItem: '',
 			todos: []
 		},
+		watch: {
+			todos: {
+				handler: function() {
+					localStorage.setItem('todos', JSON.stringify(this.todos));
+				},
+				deep: true
+			}
+		},
+		mounted: function() {
+			this.todos = JSON.parse(localStorage.getItem('todos')) || [];
+		},
 		methods: {
 			addItem: function() {
 				var item = {
@@ -26,8 +37,6 @@
 				this.todos = this.remaining;
 			}
 		},
-		// todoの残数を表示していく
-		// computedはデータから動的にプロパティを計算してくれる算出プロパティ
 		computed: {
 			remaining: function() {
 				return this.todos.filter(function(todo) {
