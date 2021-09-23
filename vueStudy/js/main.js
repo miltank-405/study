@@ -7,14 +7,9 @@
 			todos: []
 		},
 		watch: {
-			// todos: function() {
-			// 	localStorage.setItem('todos', JSON.stringify(this.todos));
-			// 	alert('Data saved!');
-			// }
 			todos: {
 				handler: function() {
 					localStorage.setItem('todos', JSON.stringify(this.todos));
-					// alert('Data saved!');
 				},
 				deep: true
 			}
@@ -39,8 +34,6 @@
 				this.todos = this.remaining;
 			}
 		},
-		// todoの残数を表示していく
-		// computedはデータから動的にプロパティを計算してくれる算出プロパティ
 		computed: {
 			remaining: function() {
 				return this.todos.filter(function(todo) {
