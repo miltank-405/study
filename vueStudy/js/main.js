@@ -6,6 +6,19 @@
 			newItem: '',
 			todos: []
 		},
+		watch: {
+			// todos: function() {
+			// 	localStorage.setItem('todos', JSON.stringify(this.todos));
+			// 	alert('Data saved!');
+			// }
+			todos: {
+				handler: function() {
+					localStorage.setItem('todos', JSON.stringify(this.todos));
+					// alert('Data saved!');
+				},
+				deep: true
+			}
+		},
 		methods: {
 			addItem: function() {
 				var item = {
