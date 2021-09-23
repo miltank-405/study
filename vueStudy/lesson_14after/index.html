@@ -9,12 +9,14 @@
 </head>
 <body>
 	<div id="app">
+		<p>Total Liles: {{ total }}</p>
 		<!-- componentで独自タグもOK -->
-		<like-component message="Like"></like-component>
+		<!-- <like-component message="Like" v-on:increment="incrementTotal"></like-component> -->
+		<like-component message="Like" @increment="incrementTotal"></like-component>
 		<!-- 何回も使い回し可能 -->
-		<like-component message="Awesome"></like-component>
-		<like-component message="Great"></like-component>
-		<like-component></like-component>
+		<like-component message="Awesome" @increment="incrementTotal"></like-component>
+		<like-component message="Great" @increment="incrementTotal"></like-component>
+		<like-component @increment="incrementTotal"></like-component>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
