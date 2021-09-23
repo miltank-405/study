@@ -14,12 +14,32 @@ body {
 	padding: 16px 0;
 }
 
+.container ul {
+	padding: 0;
+	list-style: none;
+}
+
 .container li {
 	line-height: 1.5;
+}
+
+.container li >span.done {
+	text-decoration: line-through;
+	color: #bbb;
 }
 
 .command {
 	font-size: 12px;
 	cursor: pointer;
 	color: #08c;
+}
+
+.info {
+	color: #bbb;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.container h1 >button {
+	float: right;
 }
