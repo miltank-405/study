@@ -14,6 +14,9 @@
 				deep: true
 			}
 		},
+		mounted: function() {
+			this.todos = JSON.parse(localStorage.getItem('todos')) || [];
+		},
 		methods: {
 			addItem: function() {
 				var item = {
