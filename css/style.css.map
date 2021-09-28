@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,OAAO,AAAC,CACP,KAAK,CAAE,IAAI,CAEX",
     "sources": [
         "../styleCheat/style.scss"
     ],

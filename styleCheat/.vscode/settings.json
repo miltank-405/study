@@ -3,7 +3,7 @@
 	{
 		"format": "compressed", //nested、compact、compressedのどれかを選ぶ
 		"extensionName": ".css", //style.cssとして出力
-		"savePath": "~/../css" //cssフォルダの中にstyle.cssを出力
+		"savePath": "/css" //cssフォルダの中にstyle.cssを出力
 	}
 	],
 	"liveSassCompile.settings.excludeList": [ //対象外とするフォルダを指定
