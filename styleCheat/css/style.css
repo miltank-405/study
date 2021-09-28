@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* ========================================
+	.header, .header__logo
+	基本的にメニューは別にする予定
+======================================== */
+.header {
+  width: 100%;
+  height: 100px;
+}
+
+.header__logo {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/* ========================================
+	.contents
+	各項目の目次
+======================================== */
+.contents {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
